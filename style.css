@@ -42,8 +42,9 @@ main {
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   padding: 2em 2.5em;
-  margin: 0 0 2em 0;
-  width: 100vw;
+  margin: 0 20px 2em 20px;
+  width: auto;
+  max-width: calc(100vw - 40px);
   background: #fff;
 }
 .section-box h1 {
