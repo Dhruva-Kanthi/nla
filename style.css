@@ -2,30 +2,56 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #01146a;
   color: #222;
-  background-image: url('images/temp-omar-duzz.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  /* Prevent background from scrolling on iOS */
+  /* Removed background image and set solid color */
   overscroll-behavior: none;
   overflow-x: hidden;
 }
 nav {
-  background: #333;
-  padding: 1em;
-  text-align: center;
+  background: #000;
+  padding: 0.2em 1.5em 0.5em 2em; /* Move everything a little more right and up */
+  text-align: left;
+  margin-bottom: 2em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  justify-content: flex-start;
+}
+.full-logo {
+  height: 44px;
+  width: auto;
+  margin-right: 1em;
+  margin-left: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(3.7); /* Scale up a bit more */
+  position: relative;
+  top: -12px; /* Move logo up just a little bit more */
+  transform-origin: center center; /* Scale from center */
 }
 nav a {
   color: #fff;
   margin: 0 1em;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  top: 2px;
 }
 nav a:hover {
   text-decoration: underline;
+}
+nav.hide-menu {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 main {
   /* Remove max-width and margin: 0 auto to left-align section boxes */
